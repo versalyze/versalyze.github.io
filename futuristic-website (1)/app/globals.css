@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 240 10% 3.9%;
+  --foreground: 0 0% 98%;
+  --card: 240 10% 3.9%;
+  --card-foreground: 0 0% 98%;
+  --popover: 240 10% 3.9%;
+  --popover-foreground: 0 0% 98%;
+  --primary: 214 100% 50%;
+  --primary-foreground: 0 0% 98%;
+  --secondary: 240 3.7% 15.9%;
+  --secondary-foreground: 0 0% 98%;
+  --muted: 240 3.7% 15.9%;
+  --muted-foreground: 240 5% 64.9%;
+  --accent: 214 100% 50%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 240 3.7% 15.9%;
+  --input: 240 3.7% 15.9%;
+  --ring: 214 100% 50%;
+  --radius: 0.5rem;
+}
+
+body {
+  @apply bg-background text-foreground;
+}
+
+.neon-line {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #0073ff, transparent);
+}
+
+.grid-background {
+  background-size: 100px 100px;
+  background-image: linear-gradient(to right, rgba(0, 115, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 115, 255, 0.05) 1px, transparent 1px);
+}
+
+.cyber-box {
+  position: relative;
+  border: 1px solid #0073ff;
+  overflow: hidden;
+}
+
+.cyber-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0, 115, 255, 0.2), transparent);
+  transition: 0.5s;
+}
+
+.cyber-box:hover::before {
+  left: 100%;
+}
+
